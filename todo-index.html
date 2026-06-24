@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App - Organize Your Tasks</title>
+    <link rel="stylesheet" href="todo-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">📝 My Todo List</h1>
+                <p class="subtitle">Stay organized and productive</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                    >
+                    <button id="addBtn" class="add-btn">Add Task</button>
+                </div>
+                <div class="category-filter">
+                    <label for="categorySelect">Filter by Category:</label>
+                    <select id="categorySelect" class="category-dropdown">
+                        <option value="all">All Tasks</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="health">Health</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-label">Total Tasks</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value completed" id="completedTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Remaining</span>
+                    <span class="stat-value pending" id="remainingTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value" id="progressPercent">0%</span>
+                </div>
+            </div>
+
+            <!-- Sorting Options -->
+            <div class="sort-section">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-dropdown">
+                    <option value="date-new">Newest First</option>
+                    <option value="date-old">Oldest First</option>
+                    <option value="completed">Completed First</option>
+                    <option value="pending">Pending First</option>
+                    <option value="alphabetical">Alphabetical (A-Z)</option>
+                </select>
+            </div>
+
+            <!-- Todo List -->
+            <section class="todo-list-section">
+                <div class="list-header">
+                    <h2>Your Tasks</h2>
+                    <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+                </div>
+                <ul id="todoList" class="todo-list">
+                    <li class="empty-state">
+                        <p>✨ No tasks yet. Add one to get started!</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Action Buttons -->
+        <footer class="footer">
+            <button id="clearAll" class="btn-danger">Delete All Tasks</button>
+            <button id="exportBtn" class="btn-export">Export Tasks</button>
+        </footer>
+    </div>
+
+    <!-- Modal for Editing Todo -->
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Task</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editInput" class="edit-input" placeholder="Edit your task...">
+                <select id="editCategory" class="edit-category">
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="date" id="editDueDate" class="edit-date">
+            </div>
+            <div class="modal-footer">
+                <button id="cancelEdit" class="btn-secondary">Cancel</button>
+                <button id="saveEdit" class="btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
