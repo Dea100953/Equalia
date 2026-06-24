@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom - Equalia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Equalia</h1>
+                <p class="tagline">Every Voice Matters</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">Latest News</a></li>
+                <li><a href="chatroom.html" class="active">Chatroom</a></li>
+                <li><a href="emergency.html">Emergency Contacts</a></li>
+                <li><a href="#signin" class="signin-btn">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Chatroom Section -->
+    <section class="chatroom-section">
+        <div class="chatroom-container">
+            <div class="chatroom-header">
+                <h1>Community Chatroom</h1>
+                <p>A safe space to express, share, and support one another</p>
+            </div>
+
+            <div class="chat-wrapper">
+                <!-- Chat Messages Area -->
+                <div class="chat-messages" id="chatMessages">
+                    <div class="system-message">
+                        <p>Welcome to Equalia's Community Chatroom! This is a safe, judgment-free zone where every woman can express her thoughts and emotions. Please be respectful and supportive of all members. 💜</p>
+                    </div>
+                    
+                    <div class="message other-message">
+                        <div class="message-avatar">A</div>
+                        <div class="message-content">
+                            <p class="message-username">Amira</p>
+                            <p class="message-text">Hi everyone! Just wanted to say how grateful I am for this community. Having a space to talk about what's happening in my life makes such a difference.</p>
+                            <span class="message-time">2 hours ago</span>
+                        </div>
+                    </div>
+
+                    <div class="message other-message">
+                        <div class="message-avatar">S</div>
+                        <div class="message-content">
+                            <p class="message-username">Sofia</p>
+                            <p class="message-text">@Amira I completely agree! It's so empowering to see women supporting each other like this. 💪</p>
+                            <span class="message-time">1 hour ago</span>
+                        </div>
+                    </div>
+
+                    <div class="message other-message">
+                        <div class="message-avatar">L</div>
+                        <div class="message-content">
+                            <p class="message-username">Lena</p>
+                            <p class="message-text">Has anyone else read about the new legislation on maternal rights? Would love to hear your thoughts!</p>
+                            <span class="message-time">45 minutes ago</span>
+                        </div>
+                    </div>
+
+                    <div class="message other-message">
+                        <div class="message-avatar">Z</div>
+                        <div class="message-content">
+                            <p class="message-username">Zainab</p>
+                            <p class="message-text">Yes! I've been thinking about it a lot. We need to keep pushing for change. Our voices matter! ✊</p>
+                            <span class="message-time">30 minutes ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            class="message-input" 
+                            placeholder="Share your thoughts... (Press Enter to send)"
+                        >
+                        <button class="send-btn" id="sendBtn">
+                            <span>Send</span>
+                            <span class="send-icon">→</span>
+                        </button>
+                    </div>
+                    <p class="input-hint">Be respectful, be kind, be heard. Your voice matters! 💜</p>
+                </div>
+            </div>
+
+            <!-- Room Guidelines -->
+            <div class="room-guidelines">
+                <h3>Community Guidelines</h3>
+                <ul>
+                    <li>✨ Be respectful and kind to all members</li>
+                    <li>🤐 Keep personal information confidential</li>
+                    <li>💬 Share experiences and listen to others</li>
+                    <li>🚫 No hate speech, discrimination, or harassment</li>
+                    <li>❤️ Support, don't judge</li>
+                    <li>⚠️ If you're in crisis, please reach out to emergency contacts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Equalia - Women's Empowerment Platform. All rights reserved.</p>
+        <p>Together, we are stronger. Every voice matters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

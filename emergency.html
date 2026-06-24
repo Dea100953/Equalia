@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts - Equalia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Equalia</h1>
+                <p class="tagline">Every Voice Matters</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">Latest News</a></li>
+                <li><a href="chatroom.html">Chatroom</a></li>
+                <li><a href="emergency.html" class="active">Emergency Contacts</a></li>
+                <li><a href="#signin" class="signin-btn">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Emergency Contacts Section -->
+    <section class="emergency-section">
+        <div class="emergency-container">
+            <div class="emergency-header">
+                <h1>Emergency Support Resources</h1>
+                <p>Find immediate help and support in your country. You are not alone.</p>
+            </div>
+
+            <!-- Country Selector -->
+            <div class="country-selector">
+                <label for="countrySelect">Select Your Country:</label>
+                <select id="countrySelect" class="country-dropdown">
+                    <option value="">-- Choose Your Country --</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="india">India</option>
+                    <option value="afghanistan">Afghanistan</option>
+                    <option value="iran">Iran</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="france">France</option>
+                    <option value="germany">Germany</option>
+                    <option value="japan">Japan</option>
+                    <option value="southkorea">South Korea</option>
+                    <option value="southafrica">South Africa</option>
+                </select>
+            </div>
+
+            <!-- Emergency Contacts Display -->
+            <div class="emergency-contacts" id="emergencyContacts">
+                <div class="placeholder">
+                    <p>👆 Please select your country to view emergency contacts</p>
+                </div>
+            </div>
+
+            <!-- Information Box -->
+            <div class="info-box">
+                <h3>Important Information</h3>
+                <p><strong>If you're in immediate danger, always call your local emergency number first (e.g., 911 in USA, 999 in UK, or your country's equivalent).</strong></p>
+                <p>The numbers and resources listed here provide support for women facing abuse, harassment, discrimination, or other emergencies. All calls are confidential and free.</p>
+                <p>Your safety and well-being are our priority. Don't hesitate to reach out for help. You deserve support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Equalia - Women's Empowerment Platform. All rights reserved.</p>
+        <p>Together, we are stronger. Every voice matters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
